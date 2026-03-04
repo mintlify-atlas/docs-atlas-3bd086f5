@@ -1,0 +1,82 @@
+{
+  "projectType": "saas",
+  "projectName": "Kloni",
+  "projectDescription": "A sophisticated e-commerce inventory management system to synchronize product listings across multiple Mercado Libre accounts.",
+  "theme": "almond",
+  "primaryColor": "#10b981",
+  "lightColor": "#34d399",
+  "darkColor": "#059669",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Overview",
+            "pages": [
+              "introduction",
+              "quickstart"
+            ]
+          },
+          {
+            "group": "Core Features",
+            "pages": [
+              "features/product-cloning",
+              "features/order-processing",
+              "features/multi-account-management",
+              "features/inventory-monitoring"
+            ]
+          },
+          {
+            "group": "Deployment",
+            "pages": [
+              "deployment/docker",
+              "deployment/environment-variables",
+              "deployment/infrastructure"
+            ]
+          },
+          {
+            "group": "Architecture",
+            "pages": [
+              "architecture/overview",
+              "architecture/backend",
+              "architecture/frontend",
+              "architecture/integrations"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "API Reference",
+        "groups": [
+          {
+            "group": "Endpoints",
+            "pages": [
+              "api/overview",
+              "api/store",
+              "api/announcement",
+              "api/order"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "Product cloning across Mercado Libre accounts with inventory sync",
+    "Real-time order processing via AWS SQS webhooks",
+    "Multi-account management with OAuth integration",
+    "Inventory monitoring and automatic quantity updates",
+    "Clean hexagonal architecture with Go backend",
+    "Next.js dashboard with Auth0 authentication"
+  ],
+  "publicApiSurface": [
+    "POST /store - Create and authenticate store accounts",
+    "GET /store/:id - Retrieve store information",
+    "POST /announcement/clone - Clone products across accounts",
+    "GET /announcement/:id - Get announcement details",
+    "PUT /announcement/:id/quantity - Update inventory quantities",
+    "POST /order/webhook - Receive Mercado Libre order notifications",
+    "GET /order/:id - Get order details"
+  ]
+}
